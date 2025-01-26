@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Set branch name
         id: vars
-        run: echo "BRANCH_NAME=${{ github.repository_owner == 'Guovin' && 'gd' || 'master' }}" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=${{ github.repository_owner == 'zhangmingshi468' && 'gd' || 'master' }}" >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH_NAME }}
@@ -79,13 +79,24 @@ jobs:
           except: 
             final_m3u_file = "output/result.m3u"
           print(final_m3u_file)')
+          
+          # 确保输出目录存在
+          mkdir -p output
+          
           if [[ -f "$final_file" ]]; then
             git add -f "$final_file"
-            cp "$final_file" output/result123.txt
+            cp -f "$final_file" output/result123.txt
+            echo "Copied $final_file to output/result123.txt"
+          else
+            echo "Warning: $final_file not found"
           fi
+          
           if [[ -f "$final_m3u_file" ]]; then
             git add -f "$final_m3u_file"
-            cp "$final_m3u_file" output/result123.m3u
+            cp -f "$final_m3u_file" output/result123.m3u
+            echo "Copied $final_m3u_file to output/result123.m3u"
+          else
+            echo "Warning: $final_m3u_file not found"
           fi
           if [[ -f "output/cache.pkl" ]]; then
             git add -f "output/cache.pkl"
