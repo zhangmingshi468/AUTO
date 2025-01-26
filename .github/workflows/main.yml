@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Set branch name
         id: vars
-        run: echo "BRANCH_NAME=${{ github.repository_owner == 'Guovin' && 'gd' || 'master' }}" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=${{ github.repository_owner == 'zhangmingshi468' && 'gd' || 'master' }}" >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH_NAME }}
@@ -81,9 +81,11 @@ jobs:
           print(final_m3u_file)')
           if [[ -f "$final_file" ]]; then
             git add -f "$final_file"
+            cp "$final_file" output/result123.txt
           fi
           if [[ -f "$final_m3u_file" ]]; then
             git add -f "$final_m3u_file"
+            cp "$final_m3u_file" output/result123.m3u
           fi
           if [[ -f "output/cache.pkl" ]]; then
             git add -f "output/cache.pkl"
