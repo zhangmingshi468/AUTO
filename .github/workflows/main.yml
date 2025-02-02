@@ -8,6 +8,7 @@ on:
       - master
       - dev
       - gd
+
 jobs:
   push:
     runs-on: ${{ matrix.operating-system }}
@@ -18,7 +19,7 @@ jobs:
     steps:
       - name: Set branch name
         id: vars
-        run: echo "BRANCH_NAME=${{ github.repository_owner == 'Govin' && 'gd' || 'master' }}" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=master" >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH_NAME }}
@@ -50,7 +51,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Install pipenv
         run: pip3 install --user pipenv
-      - name: Install dependecies
+      - name: Install dependencies
         run: pipenv --python 3.13 && pipenv install --deploy
       - name: Install selenium
         if: env.OPEN_DRIVER == 'True'
