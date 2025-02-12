@@ -98,5 +98,3 @@ jobs:
           fi
       - name: copy
         run: cp output/result.txt output/result321.txt
-      - name: 复制文件
-        run: cp “output/result.txt” output/result222.txt
