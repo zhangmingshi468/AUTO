@@ -83,21 +83,20 @@ jobs:
           # 确保输出目录存在
           mkdir -p output
           
-          if [[ -f "$final_file" ]]; then
-            git add -f "$final_file"
-            cp -f "$final_file" output/result123.txt
-            echo "Copied $final_file to output/result123.txt"
+          if [[ -f "output/result.txt" ]]; then
+            git add -f "output/result.txt"
+            cp -f "output/result.txt" output/result123.txt
           else
-            echo "Warning: $final_file not found"
+            echo "Warning: result.txt not found"
           fi
           
-          if [[ -f "$final_m3u_file" ]]; then
-            git add -f "$final_m3u_file"
-            cp -f "$final_m3u_file" output/result123.m3u
-            echo "Copied $final_m3u_file to output/result123.m3u"
+          if [[ -f "output/result.m3u" ]]; then
+            git add -f "output/result.m3u"
+            cp -f "output/result.m3u" output/result123.m3u
           else
-            echo "Warning: $final_m3u_file not found"
+            echo "Warning: result.m3u not found"
           fi
+          
           if [[ -f "output/cache.pkl" ]]; then
             git add -f "output/cache.pkl"
           fi
