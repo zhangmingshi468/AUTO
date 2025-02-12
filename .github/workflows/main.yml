@@ -79,10 +79,17 @@ jobs:
           except: 
             final_m3u_file = "output/result.m3u"
           print(final_m3u_file)')
-          
+
+          if [[ -f "$final_file" ]]; then
+            git add -f "$final_file"
+          fi
+          if [[ -f "$final_m3u_file" ]]; then
+            git add -f "$final_m3u_file"
+          fi
           if [[ -f "output/cache.pkl" ]]; then
             git add -f "output/cache.pkl"
           fi
+          
           if [[ -f "output/sort.log" ]]; then
             git add -f "output/sort.log"
           fi
