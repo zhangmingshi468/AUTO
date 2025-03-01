@@ -85,6 +85,9 @@ jobs:
            
             cp "$final_file" output/output321.txt
             git add -f "output/output321.txt"
+            
+            cp "$final_file" output/free.txt
+            git add -f "output/free.txt"
          
           fi
           if [[ -f "$final_m3u_file" ]]; then
@@ -92,6 +95,9 @@ jobs:
             
             cp "$final_m3u_file" output/output321.m3u
             git add -f "output/output321.m3u"
+
+            cp "$final_m3u_file" output/free.m3u
+            git add -f "output/free.m3u"
           fi
           
 
