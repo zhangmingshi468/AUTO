@@ -2,3 +2,32 @@
 # 支持设置白名单：接口后添加$!
 # The local source list, one line per source, format: channel name, interface address
 # Support setting whitelist: add $! after the interface
+
+☘️江西频道,#genre#
+江西都市,http://local-live.jxtvcn.com.cn/live/tv_jxtv2.m3u8
+江西经济生活,http://local-live.jxtvcn.com.cn/live/tv_jxtv3.m3u8
+江西影视,http://local-live.jxtvcn.com.cn/live/tv_jxtv4.m3u8
+江西公共,http://local-live.jxtvcn.com.cn/live/tv_jxtv5.m3u8
+江西少儿,http://local-live.jxtvcn.com.cn/live/tv_jxtv6.m3u8
+江西新闻,http://local-live.jxtvcn.com.cn/live/tv_jxtv7.m3u8
+
+☘️浙江频道,#genre#
+浙江钱江,https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
+浙江生活,https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
+浙江经济生活,http://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
+浙江教育,https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+浙江民生,https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
+浙江新闻,https://ali-m-l.cztv.com/channels/lantian/channel07/720p.m3u8
+浙江少儿,https://ct-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8
+
+☘️台湾频道,#genre#
+民視HD,rtmp://f13h.mine.nu/sat/tv051 
+中視HD,rtmp://f13h.mine.nu/sat/tv091 
+華視HD,rtmp://f13h.mine.nu/sat/tv111 
+台視HD,rtmp://f13h.mine.nu/sat/tv071
+东森超視HD,rtmp://f13h.mine.nu/sat/tv331 
+ELEVEN體育1台,rtmp://f13h.mine.nu/sat/tv731
+ELEVEN體育2台,rtmp://f13h.mine.nu/sat/tv741
+緯來育樂,rtmp://f13h.mine.nu/sat/tv701
+緯來日本,rtmp://f13h.mine.nu/sat/tv771
+MoMo综合,rtmp://f13h.mine.nu/sat/tv761
